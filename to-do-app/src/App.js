@@ -50,8 +50,8 @@ class App extends Component {
     const tasks = [...this.state.tasks];
     tasks.forEach((task) => {
       if (task.id === id) {
-        task.active === false;
-        task.finishDate= new Date().getTime();
+        task.active = false;
+        task.finishDate = new Date().getTime();
       }
     });
     this.setState({
