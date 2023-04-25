@@ -31,7 +31,7 @@ class App extends Component {
       },
     ],
   };
-  deleteTask = (id) => {
+    deleteTask = (id) => {
     console.log("delete");
     const tasks = [...this.state.tasks];
     const index = tasks.findIndex((task) => task.id === id);
