@@ -6,8 +6,15 @@ class AddTask extends Component {
         checked: false,
         date: new Date().toLocaleString().slice(0, 10),
     } 
+
+    handleDate = (e) => {
+        this.setState({
+            date: e.target.value,
+        })
+    }
+
     render() {
-        const minDate = new Date().toLocaleString().slice(0, 10)
+        const minDate = "2023-04-26"
 
         let maxDate = "2023-12-31"
     
@@ -17,7 +24,7 @@ class AddTask extends Component {
            <input type='checkbox' checked={this.state.checked} id='important'/>
            <label htmlFor='important'/>Priority
            <label htmlFor='date'/>Complete task until:
-           <input type='date' value={this.state.date} min={minDate} max={maxDate}/>
+           <input type='date' value={this.state.date} min={minDate} max={maxDate} onChange={this.handleDate}/>
            <button>Add task</button>
             <hr />
             </div>
