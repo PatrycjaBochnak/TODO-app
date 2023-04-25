@@ -22,6 +22,9 @@ class AddTask extends Component {
             checked: e.target.checked,
         })
     }
+    handleClick = () => {
+        this.props.addTask(this.state.text, this.state.checked, this.state.date);
+    }
     render() {
         const minDate = "2023-04-26"
 
@@ -34,7 +37,7 @@ class AddTask extends Component {
            <label htmlFor='important'/>Priority
            <label htmlFor='date'/>Complete task until:
            <input type='date' value={this.state.date} min={minDate} max={maxDate} onChange={this.handleDate}/>
-           <button>Add task</button>
+           <button onClick={this.handleClick}>Add task</button>
             <hr />
             </div>
         );
