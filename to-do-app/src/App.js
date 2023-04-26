@@ -3,6 +3,7 @@ import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
 
 class App extends Component {
+  counter = 3;
   state = {
     tasks: [
       {
@@ -31,7 +32,25 @@ class App extends Component {
       },
     ],
   };
-    deleteTask = (id) => {
+  addTask = (text, date, imporant) => {
+    console.log("added task");
+    const task = {
+      id: this.counter,
+      text,
+      date,
+      imporant,
+      active: true,
+      finishDate: null,
+    };
+    this.counter++;
+
+    this.setState((prevState) => ({
+      tasks: [...prevState.tasks, task],
+    }));
+
+    return true;
+  };
+  deleteTask = (id) => {
     console.log("delete");
     const tasks = [...this.state.tasks];
     const index = tasks.findIndex((task) => task.id === id);
@@ -62,7 +81,7 @@ class App extends Component {
     return (
       <div className="App">
         TODO APP
-        <AddTask />
+        <AddTask addTask={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
