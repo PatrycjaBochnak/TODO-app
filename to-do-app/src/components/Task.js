@@ -14,12 +14,49 @@ const Task = (props) => {
           <strong style={importantTask ? importantStyle : null}>{text}</strong>{" "}
           - Do it until: <span>{date} </span>
           <button onClick={() => props.change(id)}>Done</button>
-          <button onClick={() => props.delete(id)}>X</button>
+          <button onClick={() => { props.delete(id) ; this.messageStatus()}}>X</button>
         </p>
       </div>
     );
   } else {
     const finishedTime = new Date(finishDate).toLocaleString();
+
+
+
+
+
+
+
+
+
+    const = [inputValue, setInputValue] = useState("");
+
+    const = handleInputChange = (e) => {
+      setInputValue(e.target.value);
+  
+    }
+    const = handleButtonClick = () => { 
+      if (inputValue) { 
+        const randomNum = Math.random();
+        if (randomNum > 0.5) {
+          alert('wow')
+        } else {
+          alert('youre awesome')
+        } } else {
+          alert('you rock')
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
     return (
       <div>
         <p>

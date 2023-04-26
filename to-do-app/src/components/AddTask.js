@@ -4,7 +4,7 @@ class AddTask extends Component {
   state = {
     text: "",
     checked: false,
-    date: new Date().toLocaleString().slice(0, 10),
+    date: '2023-06-26',
   };
 
   handleDate = (e) => {
@@ -25,19 +25,19 @@ class AddTask extends Component {
   handleClick = () => {
     const { text, date, checked } = this.state;
     const addTask = this.props.addTask(text, date, checked);
+
     if (addTask) {
       this.setState({
         text: "",
         checked: false,
-        date: new Date().toLocaleString().slice(0, 10),
+        date: '2023-04-25',
       });
     }
   };
-
   render() {
     const minDate = "2023-04-26";
 
-    let maxDate = "2023-12-31";
+    const maxDate = "2023-12-31";
 
     return (
       <div className="form">
