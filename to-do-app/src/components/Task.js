@@ -5,16 +5,30 @@ const Task = (props) => {
     color: "red",
   };
 
+  const handleClickAlert = () => {
+    window.alert("youre awesome!");
+  };
+
   const { text, date, id, active, finishDate, important } = props.task;
 
   if (active) {
     return (
       <div>
         <p>
-          <strong style={important ? importantStyle : null}>{text}</strong>{" "}
-          - Do it until: <span>{date} </span>
-          <button onClick={() => props.change(id)}>Done</button>
-          <button onClick={() => { props.delete(id) ; this.messageStatus()}}>X</button>
+          <strong style={important ? importantStyle : null}>{text}</strong> - Do
+          it until: <span>{date} </span>
+          <button onClick={() => {
+            props.change(id);
+            handleClickAlert()}}>
+              Done
+              </button>
+          <button
+            onClick={() => {
+              props.delete(id);
+              }}
+          >
+            X
+          </button>
         </p>
       </div>
     );
@@ -23,8 +37,8 @@ const Task = (props) => {
     return (
       <div>
         <p>
-          <strong style={important ? importantStyle : null}>{text}</strong>{" "}
-          Do it until:{" "}
+          <strong style={important ? importantStyle : null}>{text}</strong> Do
+          it until:{" "}
           <span>
             {date}
             <span> Done in:</span> {finishedTime}
