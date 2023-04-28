@@ -20,7 +20,7 @@ const Task = (props) => {
     const message2 = document.createElement("div");
     message2.textContent = "keep up the good work!";
     message2.style.position = "fixed";
-    message2.style.top = "60px";
+    message2.style.top = "20px";
     message2.style.left = "50%";
     message2.style.transform = "translate(-50%, 0)";
     message2.style.backgroundColor = "black";
@@ -32,7 +32,7 @@ const Task = (props) => {
     const message3 = document.createElement("div");
     message3.textContent = "incredible! ";
     message3.style.position = "fixed";
-    message3.style.top = "100px";
+    message3.style.top = "20px";
     message3.style.left = "50%";
     message3.style.transform = "translate(-50%, 0)";
     message3.style.backgroundColor = "black";
