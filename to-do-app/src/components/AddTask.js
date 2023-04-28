@@ -24,6 +24,7 @@ class AddTask extends Component {
   };
   handleClick = () => {
     const { text, date, checked } = this.state;
+    if(text.length > 2) {
     const addTask = this.props.addTask(text, date, checked);
 
     if (addTask) {
@@ -33,7 +34,10 @@ class AddTask extends Component {
         date: '2023-04-25',
       });
     }
-  };
+  } else {
+    alert("Too short task");
+  }
+};
   render() {
     const minDate = "2023-04-26";
 
