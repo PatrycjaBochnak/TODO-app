@@ -6,21 +6,25 @@ class AddTask extends Component {
     checked: false,
     date: "2023-06-26",
   };
+  
   handleDate = (e) => {
     this.setState({
       date: e.target.value,
     });
   };
+  
   handleText = (e) => {
     this.setState({
       text: e.target.value,
     });
   };
+  
   handleCheckbox = (e) => {
     this.setState({
       checked: e.target.checked,
     });
   };
+  
   shortTaskAlert = () => {
     const alertTask = document.createElement("div");
     alertTask.textContent = "too short message";
@@ -39,6 +43,7 @@ class AddTask extends Component {
       alertTask.style.transition = "textContent 0.5s ease-out";
     }, 1000);
   };
+  
   handleClick = () => {
     const { text, date, checked } = this.state;
     if (text.length > 2) {
@@ -54,10 +59,19 @@ class AddTask extends Component {
     } else {
       this.shortTaskAlert();
     }
+    this.setState({
+      text: ''
+    })
   };
+  
+  handleClear = () => {
+    this.setState({
+      text: ""
+    });
+  };
+  
   render() {
     const minDate = "2023-04-26";
-
     const maxDate = "2023-12-31";
 
     return (
@@ -68,6 +82,8 @@ class AddTask extends Component {
           value={this.state.text}
           onChange={this.handleText}
         />
+        <button onClick={this.handleClick}>Add task</button>
+        <button onClick={this.handleClear}>X</button>
         <input
           type="checkbox"
           checked={this.state.checked}
@@ -85,7 +101,6 @@ class AddTask extends Component {
           max={maxDate}
           onChange={this.handleDate}
         />
-        <button onClick={this.handleClick}>Add task</button>
         <hr />
       </div>
     );
