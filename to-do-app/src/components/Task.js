@@ -30,7 +30,7 @@ const Task = (props) => {
     message2.style.zIndex = "9999";
 
     const message3 = document.createElement("div");
-    message3.textContent = "incredible! ";
+    message3.textContent = "You're so cool! How come? ";
     message3.style.position = "fixed";
     message3.style.top = "20px";
     message3.style.left = "50%";
