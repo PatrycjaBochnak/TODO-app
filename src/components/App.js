@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
-
+import Footer
+ from "../layouts/Footer";
 class App extends Component {
   counter = 3;
   state = {
@@ -77,17 +78,18 @@ class App extends Component {
       tasks,
     });
   };
- 
+
   render() {
     return (
       <div className="App">
-        TODO APP
+        <div className="app-name">T O D O A P P</div>
         <AddTask addTask={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
           change={this.changeTaskStatus}
         />
+        <Footer />
       </div>
     );
   }

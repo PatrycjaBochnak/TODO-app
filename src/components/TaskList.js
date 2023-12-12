@@ -1,5 +1,6 @@
 import React from "react";
 import Task from "./Task";
+import '../styles/App.css';
 
 const TaskList = (props) => {
   const active = props.tasks.filter((task) => task.active === true);
@@ -27,7 +28,7 @@ const TaskList = (props) => {
   return (
     <>
       <div className="active">
-        <h2>Tasks to do</h2>
+        <h2 className="font-1">Tasks to do</h2>
         {activeTasks.length > 0 ? (
           activeTasks
         ) : (
@@ -36,8 +37,8 @@ const TaskList = (props) => {
       </div>
       <hr />
       <div className="done">
-        <h2>
-          Done tasks <span>{completed.length}</span>
+        <h2 className="font-1">
+          Done tasks: <span>{completed.length}</span>
         </h2>
         {completed.length > 5 && <span>Preview for only 5 last tasks</span>}
         {completedTasks.slice(0, 5)}

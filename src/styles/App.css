@@ -1,6 +1,26 @@
+@font-face { 
+  font-family: 'Mayego';
+  src: url(../fonts/Mayego.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.4em;
+  vertical-align: baseline;
+  text-decoration: none;
+  outline: 0;
+}
+
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
   background-color: pink;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -36,4 +56,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+.app-name {
+  font-family: 'Mayego', sans-serif;
+  font-size: 60px;
+  letter-spacing: 0.5em;
+}
+.font-1 {
+  font-family: 'Mayego', sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.5em;
 }

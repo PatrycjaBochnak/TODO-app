@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../styles/AddTask.css';
 
 class AddTask extends Component {
   state = {
