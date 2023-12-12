@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import AddTask from "./components/AddTask";
-import TaskList from "./components/TaskList";
+import AddTask from "./AddTask";
+import TaskList from "./TaskList";
 
 class App extends Component {
   counter = 3;

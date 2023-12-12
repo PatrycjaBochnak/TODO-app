@@ -24,7 +24,7 @@ class AddTask extends Component {
       checked: e.target.checked,
     });
   };
-  
+
   shortTaskAlert = () => {
     const alertTask = document.createElement("div");
     alertTask.textContent = "too short message";
