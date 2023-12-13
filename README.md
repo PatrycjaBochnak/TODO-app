@@ -1,12 +1,14 @@
-# TODO App 📫 ➤ 📭
+<h1 align="center"> TODO App 📫 ➤ 📭
+</h1>
 
 TODO App is a simple application that helps you to mark and check your daily quests. 
 
+---
 
 ## How to start 🚀
 
-1. Install dependiences with npm install
-2. Run npm start to start developing
+1. Install dependiences with `npm install`
+2. Run `npm start` to start developing
 
 ## 📝 Project requirements 
 
