@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import AddTask from "../components/AddTask";
-import TaskList from "../components/TaskList";
-import Footer from "./Footer";
+import AddTask from "./AddTask";
+import TaskList from "./TaskList";
+import Footer from "../layouts/Footer";
+import Header from "../layouts/Header";
 class App extends Component {
   counter = 3;
   state = {
@@ -81,15 +82,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-name">T O D O A P P</div>
+        <Header />
+        <div className="main-app-content">
         <AddTask addTask={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
           change={this.changeTaskStatus}
         />
+        </div>
         <Footer />
-      </div>
+        </div>
     );
   }
 }

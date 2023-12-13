@@ -80,7 +80,7 @@ class AddTask extends Component {
         <div className="todo-input">
           <input
             type="text"
-            placeholder="add task"
+            placeholder="Create a new todo..."
             value={this.state.text}
             onChange={this.handleText}
           />
