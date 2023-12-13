@@ -28,7 +28,7 @@ const TaskList = (props) => {
   return (
     <>
       <div className="active">
-        <h2 className="font-1">Tasks to do</h2>
+        <h2 className="App-headings">Tasks to do</h2>
         {activeTasks.length > 0 ? (
           activeTasks
         ) : (
@@ -37,7 +37,7 @@ const TaskList = (props) => {
       </div>
       <hr />
       <div className="done">
-        <h2 className="font-1">
+        <h2 className="App-headings">
           Done tasks: <span>{completed.length}</span>
         </h2>
         {completed.length > 5 && <span>Preview for only 5 last tasks</span>}
