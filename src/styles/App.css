@@ -10,15 +10,14 @@
 
 body {
   position: relative;
-  display: flex;
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  flex-direction: column;
   background-color: beige;
 }
 .main-app-content {
 position: relative;
 display: flex;
-flex-flow: row;
+flex-flow: column;
+justify-content: center;
 }

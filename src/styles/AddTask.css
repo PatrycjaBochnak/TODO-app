@@ -1,10 +1,12 @@
 .form-todo {
-    position:absolute;
+    position: relative;
     display: flex;
-    width: 50%;
+    flex-flow: column;
+    width: 100%;
     justify-content: space-around;
 }
 .todo-addtask {
     position: relative;
     display: flex;
+    flex-flow: column;
 }

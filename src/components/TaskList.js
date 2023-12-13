@@ -1,6 +1,6 @@
 import React from "react";
 import Task from "./Task";
-import '../styles/App.css';
+import '../styles/TaskList.css';
 
 const TaskList = (props) => {
   const active = props.tasks.filter((task) => task.active === true);
@@ -27,7 +27,7 @@ const TaskList = (props) => {
 
   return (
     <>
-      <div className="active">
+      <div className="active-tasks">
         <h2 className="App-headings">Tasks to do</h2>
         {activeTasks.length > 0 ? (
           activeTasks
