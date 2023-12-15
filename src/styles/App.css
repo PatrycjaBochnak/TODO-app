@@ -18,6 +18,13 @@ body {
 .main-app-content {
 position: relative;
 display: flex;
+width: 40%;
 flex-flow: column;
 justify-content: center;
+background-color: darksalmon;
+}
+.App { 
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
