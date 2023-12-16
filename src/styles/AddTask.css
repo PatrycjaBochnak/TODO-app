@@ -1,7 +1,9 @@
 .form-todo {
     position: relative;
+    padding: 30px;
     display: flex;
     flex-flow: column;
+    align-items: center;
     width: 100%;
     justify-content: space-around;
 }
@@ -9,6 +11,10 @@
     position: relative;
     display: flex;
     flex-flow: column;
-    width: 30%;
-    
+    align-items: center;
+    width: 100%;
+}
+.todo-input {
+    position: relative;
+    padding: 10px;
 }

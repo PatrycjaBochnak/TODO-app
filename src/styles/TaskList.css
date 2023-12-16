@@ -2,4 +2,11 @@
     position: relative;
     display: flex;
     flex-flow: column;
+    align-items: center;
+}
+.done {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }

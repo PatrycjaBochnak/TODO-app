@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   background-color: beige;
 }
+
 .main-app-content {
 position: relative;
 display: flex;
@@ -23,6 +24,7 @@ flex-flow: column;
 justify-content: center;
 background-color: darksalmon;
 }
+
 .App { 
   display: flex;
   flex-flow: column;
