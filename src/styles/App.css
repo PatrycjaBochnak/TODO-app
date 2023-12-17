@@ -24,10 +24,11 @@
 
 .main-app-content {
   position: relative;
+  top: 60px;
   display: flex;
   width: 40%;
   height: 100%;
-  min-height: calc(100vh - 95px);
+  min-height: calc(100vh - 200px);
   flex: 1;
   flex-flow: column;
   background-color: darksalmon;

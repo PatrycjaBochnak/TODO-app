@@ -1,12 +1,32 @@
-.active-tasks { 
-    position: relative;
+.tasks-list {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
+    margin: 20px;
 }
-.done {
-    position: relative;
+
+.App-headings {
     display: flex;
-    flex-flow: column;
-    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.active-tasks,
+.done {
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.button:hover { 
+    background-color: tomato;
 }

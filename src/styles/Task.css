@@ -1,0 +1,35 @@
+.task-container {
+    margin-bottom: 10px;
+}
+
+.task-container p {
+    margin: 0;
+    padding: 10px;
+    background-color: coral;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-container strong {
+    color: #333;
+}
+
+.task-container span {
+    margin-left: 10px;
+}
+
+.task-container button { 
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task-container button:hover { 
+    background-color: burlywood;
+}

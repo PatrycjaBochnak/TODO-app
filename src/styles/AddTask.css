@@ -16,5 +16,58 @@
 }
 .todo-input {
     position: relative;
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.todo-input input {
+    flex: 1;
     padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.todo-input button {
+    margin-left: 10px;
+    background-color: aquamarine;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.date-input {
+    margin-bottom: 10px;
+}
+
+.date-input label {
+    margin-right: 10px;
+}
+
+.todo-addtask button {
+    background-color: darkorange;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-addtask button:hover {
+    background-color: brown;
+}
+
+.todo-input input[type="checkbox"]{
+    margin-left: 10px;
+}
+
+.todo-input button {
+    background-color: azure;
+}
+
+.todo-input button:hover {
+    background-color: blueviolet;
 }

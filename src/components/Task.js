@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Task.css"
 
 const Task = (props) => {
   const importantStyle = {
@@ -68,7 +69,7 @@ const Task = (props) => {
 
   if (active) {
     return (
-      <div>
+      <div className="task-container">
         <p>
           <strong style={important ? importantStyle : null}>{text}</strong> - Do
           it until: <span>{date} </span>

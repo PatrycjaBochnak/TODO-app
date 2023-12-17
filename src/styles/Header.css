@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  top: 30px;
   width: 40%;
   display: flex;
   background-color: rgba(178, 120, 180, 0.5); 
