@@ -26,7 +26,7 @@ const TaskList = (props) => {
   ));
 
   return (
-    <>
+    <div className="tasks-list">
       <div className="active-tasks">
         <h2 className="App-headings">Tasks to do</h2>
         {activeTasks.length > 0 ? (
@@ -43,7 +43,7 @@ const TaskList = (props) => {
         {completed.length > 5 && <span>Preview for only 5 last tasks</span>}
         {completedTasks.slice(0, 5)}
       </div>
-    </>
+      </div>
   );
 };
 

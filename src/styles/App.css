@@ -8,7 +8,13 @@
   outline: 0;
 }
 
-body {
+.App { 
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+  body {
   position: relative;
   height: 100%;
   width: 100%;
@@ -17,16 +23,12 @@ body {
 }
 
 .main-app-content {
-position: relative;
-display: flex;
-width: 40%;
-flex-flow: column;
-justify-content: center;
-background-color: darksalmon;
-}
-
-.App { 
+  position: relative;
   display: flex;
+  width: 40%;
+  height: 100%;
+  min-height: calc(100vh - 95px);
+  flex: 1;
   flex-flow: column;
-  align-items: center;
+  background-color: darksalmon;
 }
