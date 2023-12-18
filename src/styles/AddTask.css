@@ -47,8 +47,16 @@
     margin-right: 10px;
 }
 
+.date-input input {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 19px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 .todo-addtask button {
-    background-color: darkorange;
+    background-color: blueviolet;
     color: black;
     border: none;
     padding: 10px 15px;
@@ -65,9 +73,9 @@
 }
 
 .todo-input button {
-    background-color: azure;
+    background-color: blueviolet;
 }
 
 .todo-input button:hover {
-    background-color: blueviolet;
+    background-color: brown;
 }

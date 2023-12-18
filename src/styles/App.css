@@ -34,5 +34,5 @@
   min-height: calc(100vh - 200px);
   flex: 1;
   flex-flow: column;
-  background-color: darksalmon;
+  background-color: violet;
 }
