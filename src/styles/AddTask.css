@@ -1,6 +1,5 @@
 .form-todo {
     position: relative;
-    padding: 30px;
     display: flex;
     flex-flow: column;
     align-items: center;
