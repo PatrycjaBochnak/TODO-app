@@ -13,7 +13,7 @@
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background-image: url("https://img.freepik.com/premium-photo/abstract-purple-black-background-violet-color-alcohol-ink-explosion-stains-blots-exoplanet-sky-ocean-acrylic-wallpaper-print-materials_154092-2741.jpg?w=2000");
+  background-image: url("../images/5931563.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,5 +34,6 @@
   min-height: calc(100vh - 200px);
   flex: 1;
   flex-flow: column;
-  background-color: violet;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
 }
