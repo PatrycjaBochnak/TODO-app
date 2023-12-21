@@ -11,7 +11,6 @@ const TaskList = (props) => {
     <Task
       key={task.id}
       task={task}
-      delete={props.delete}
       change={props.change}
     />
   ));
@@ -20,7 +19,6 @@ const TaskList = (props) => {
     <Task
       key={task.id}
       task={task}
-      delete={props.delete}
       change={props.change}
     />
   ));
@@ -36,13 +34,13 @@ const TaskList = (props) => {
         )}
       </div>
       <hr />
-      <div className="done">
+      {/* <div className="done">
         <h2 className="App-headings">
           Done tasks
         </h2>
         {completed.length > 5 && <span>Preview for only 5 last tasks</span>}
         {completedTasks.slice(0, 5)}
-      </div>
+      </div> */}
       </div>
   );
 };

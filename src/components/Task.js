@@ -71,23 +71,16 @@ const Task = (props) => {
     return (
       <div className="task-container">
         <p>
-          <strong style={important ? importantStyle : null}>{text}</strong> - Do
-          it until: <span>{date} </span>
-          <button
+        <button
             onClick={() => {
               props.change(id);
               handleClickAlert();
             }}
           >
-            Done
           </button>
-          <button
-            onClick={() => {
-              props.delete(id);
-            }}
-          >
-            X
-          </button>
+          <strong style={important ? importantStyle : null}>{text}</strong>
+          {/* Do it until: <span>{date} </span> */}
+      
         </p>
       </div>
     );
@@ -96,13 +89,14 @@ const Task = (props) => {
     return (
       <div>
         <p>
-          <strong style={important ? importantStyle : null}>{text}</strong> Do
+          <strong style={important ? importantStyle : null}>{text}</strong> 
+          {/* Do
           it until:{" "}
           <span>
             {date}
             <span> Done in:</span> {finishedTime}
-          </span>
-          <button onClick={() => props.delete(id)}>X</button>
+          </span> */}
+          {/* <button onClick={() => props.delete(id)}>X</button> */}
         </p>
       </div>
     );

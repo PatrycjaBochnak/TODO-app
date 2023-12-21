@@ -1,4 +1,5 @@
 .tasks-list {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,10 +14,12 @@
 
 .active-tasks,
 .done {
+    width: 90%;
     margin-bottom: 20px;
 }
-
 .button {
+    display: flex;
+    flex-flow: column;
     background-color: #007bff;
     color: #fff;
     border: none;

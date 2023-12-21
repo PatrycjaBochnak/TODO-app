@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
+import NavTask from "./NavTask";
 import Footer from "../layouts/Footer";
 import Header from "../layouts/Header";
 class App extends Component {
@@ -9,25 +10,25 @@ class App extends Component {
     tasks: [
       {
         id: 0,
-        text: "get a job",
-        date: "2022-10-08",
-        important: true,
+        text: "Get a job",
+        date: "2024-10-08",
+        important: false,
         active: true,
         finishDate: null,
       },
       {
         id: 1,
-        text: "wash my puppy",
-        date: "2022-05-10",
-        important: true,
+        text: "Wash my puppy",
+        date: "2024-05-10",
+        important: false,
         active: true,
         finishDate: null,
       },
       {
         id: 2,
-        text: "clean windows",
-        date: "2022-05-05",
-        important: true,
+        text: "Clean windows",
+        date: "2024-05-05",
+        important: false,
         active: true,
         finishDate: null,
       },
@@ -90,6 +91,7 @@ class App extends Component {
           delete={this.deleteTask}
           change={this.changeTaskStatus}
         />
+        <NavTask />
         </div>
         <Footer />
         </div>

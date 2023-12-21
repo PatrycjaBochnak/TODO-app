@@ -7,7 +7,6 @@ class AddTask extends Component {
     checked: false,
     date: "2023-06-26",
   };
-
   handleDate = (e) => {
     this.setState({
       date: e.target.value,
@@ -64,15 +63,8 @@ class AddTask extends Component {
       text: "",
     });
   };
-
-  handleClear = () => {
-    this.setState({
-      text: "",
-    });
-  };
-
   render() {
-    const minDate = "2023-04-26";
+    const currentDate = new Date();
     const maxDate = "2029-12-31";
 
     return (
@@ -84,27 +76,26 @@ class AddTask extends Component {
             value={this.state.text}
             onChange={this.handleText}
           />
-          <button onClick={this.handleClear}>Clear</button>
-          <label htmlFor="important" />
+          {/* <label htmlFor="important" />
           Priority
           <input
             type="checkbox"
             checked={this.state.checked}
             id="important"
             onChange={this.handleCheckbox}
-          />
+          /> */}
         </div>
-        <div className="date-input">
+        {/* <div className="date-input">
           <label htmlFor="date" />
           Complete task until:
           <input
             type="date"
             value={this.state.date}
-            min={minDate}
+            min={currentDate}
             max={maxDate}
             onChange={this.handleDate}
           />
-        </div>
+        </div> */}
         <div className="todo-addtask">
           <button onClick={this.handleClick}>Add task</button>
         </div>
