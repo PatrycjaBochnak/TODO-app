@@ -1,5 +1,4 @@
 .tasks-list {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +10,6 @@
     justify-content: center;
     color: #333;
 }
-
 .active-tasks,
 .done {
     width: 90%;

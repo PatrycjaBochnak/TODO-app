@@ -32,6 +32,14 @@ class App extends Component {
         active: true,
         finishDate: null,
       },
+      {
+        id: 3,
+        text: "Read for 1 hour",
+        date: "2024-05-05",
+        important: false,
+        active: true,
+        finishDate: null,
+      },
     ],
   };
   addTask = (text, date, imporant) => {
