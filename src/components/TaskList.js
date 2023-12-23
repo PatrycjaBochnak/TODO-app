@@ -1,6 +1,6 @@
 import React from "react";
 import Task from "./Task";
-import '../styles/TaskList.css';
+import "../styles/TaskList.css";
 
 const TaskList = (props) => {
   const active = props.tasks.filter((task) => task.active === true);
@@ -8,20 +8,14 @@ const TaskList = (props) => {
   const completed = props.tasks.filter((task) => task.active === false);
 
   const activeTasks = active.map((task) => (
-    <Task
-      key={task.id}
-      task={task}
-      change={props.change}
-    />
+    <Task key={task.id} task={task} change={props.change} />
   ));
 
   const completedTasks = completed.map((task) => (
-    <Task
-      key={task.id}
-      task={task}
-      change={props.change}
-    />
+    <Task key={task.id} task={task} change={props.change} />
   ));
+
+  const allTasks = activeTasks.concat(completedTasks);
 
   return (
     <div className="tasks-list">
@@ -41,7 +35,7 @@ const TaskList = (props) => {
         {completed.length > 5 && <span>Preview for only 5 last tasks</span>}
         {completedTasks.slice(0, 5)}
       </div> */}
-      </div>
+    </div>
   );
 };
 

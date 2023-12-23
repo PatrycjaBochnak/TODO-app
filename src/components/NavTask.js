@@ -1,38 +1,32 @@
-import React from "react";
-import Task from "./Task";
-import "../styles/NavTask.css"
+import TaskList from "./TaskList";
+import "../styles/NavTask.css";
 const NavTask = (props) => {
+  const active = props.tasks.filter((task) => task.active === true);
 
-    const active = props.tasks.filter((task) => task.active === true);
-
-
-    const handleClickAllTasks = () => {
-        document.getElementById("all-tasks").style.display = 'block';
-    }
-    const handleClickActiveTasks = () => {
-        document.getElementById("active-tasks").style.display = 'block';
-    }
-
-    const handleClickCompletedTasks = () => {
-        document.getElementById("done").style.display = 'block';
-    }
-    return(
-        <div className="nav-task">
-        <div className="tasks-left">{active.length} tasks left</div>
-        <button className="all-tasks-btn"
-          >All</button>
-                 <button className="active-tasks-btn"
-            onClick={() => {
-                handleClickActiveTasks();
-            }}
-          >Active</button>
-                 <button className="completed-tasks-btn"
-            onClick={() => {
-                handleClickCompletedTasks();
-            }}
-          >Completed</button>
-        </div>
-    )
-}
+  return (
+    <div className="nav-task">
+      <div className="tasks-left">{active.length} tasks left</div>
+      <button
+        className="all-tasks-btn"
+        onClick={() => props.changeTaskToShow("all")}
+      >
+        All
+      </button>
+      <button
+        className="active-tasks-btn"
+        onClick={() => props.changeTaskToShow("active")}
+      >
+        Active
+      </button>
+      <button
+        className="completed-tasks-btn"
+        onClick={() => props.changeTaskToShow("completed")}
+      >
+        Completed
+      </button>
+      <TaskList tasks={props.tasks} change={props.change} />
+    </div>
+  );
+};
 
 export default NavTask;

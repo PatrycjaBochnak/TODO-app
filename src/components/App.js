@@ -87,7 +87,9 @@ class App extends Component {
       tasks,
     });
   };
-
+changeTaskToShow = (filter) => {
+  console.log(`Changing tasks to show: ${filter}`);
+}
   render() {
     return (
       <div className="App">
@@ -98,9 +100,11 @@ class App extends Component {
           tasks={this.state.tasks}
           delete={this.deleteTask}
           change={this.changeTaskStatus}
+          changeTasksToShow={this.changeTaskToShow}
         />
         <NavTask 
             tasks={this.state.tasks}
+            changeTasksToShow={this.changeTaskToShow}
         />
         </div>
         <Footer />
