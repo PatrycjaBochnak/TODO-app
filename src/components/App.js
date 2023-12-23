@@ -60,20 +60,20 @@ class App extends Component {
 
     return true;
   };
-  deleteTask = (id) => {
-    console.log("delete");
-    const tasks = [...this.state.tasks];
-    const index = tasks.findIndex((task) => task.id === id);
-    tasks.splice(index, 1);
-    this.setState({
-      tasks,
-    });
-    // let tasks = [...this.state.tasks];
-    // tasks = tasks.filter(task => task.id !== id)
-    // this.setState({
-    // tasks
-    // })
-  };
+  // deleteTask = (id) => {
+  //   console.log("delete");
+  //   const tasks = [...this.state.tasks];
+  //   const index = tasks.findIndex((task) => task.id === id);
+  //   tasks.splice(index, 1);
+  //   this.setState({
+  //     tasks,
+  //   });
+  //   // let tasks = [...this.state.tasks];
+  //   // tasks = tasks.filter(task => task.id !== id)
+  //   // this.setState({
+  //   // tasks
+  //   // })
+  // };
   changeTaskStatus = (id) => {
     console.log("change");
     const tasks = [...this.state.tasks];
@@ -99,7 +99,9 @@ class App extends Component {
           delete={this.deleteTask}
           change={this.changeTaskStatus}
         />
-        <NavTask />
+        <NavTask 
+            tasks={this.state.tasks}
+        />
         </div>
         <Footer />
         </div>

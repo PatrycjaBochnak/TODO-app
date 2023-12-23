@@ -1,3 +1,30 @@
-.tasks-left-todo {
+.nav-task {
     display: flex;
-}
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .tasks-left-todo {
+    font-weight: bold;
+  }
+  
+  .all-tasks-btn,
+  .active-tasks-btn,
+  .completed-tasks-btn {
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #4caf50; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .all-tasks-btn:hover,
+  .active-tasks-btn:hover,
+  .completed-tasks-btn:hover {
+    background-color: #45a049;
+  }
+  

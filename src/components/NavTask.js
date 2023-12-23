@@ -1,6 +1,11 @@
 import React from "react";
+import Task from "./Task";
 import "../styles/NavTask.css"
-function NavTask() {
+const NavTask = (props) => {
+
+    const active = props.tasks.filter((task) => task.active === true);
+
+
     const handleClickAllTasks = () => {
         document.getElementById("all-tasks").style.display = 'block';
     }
@@ -13,11 +18,8 @@ function NavTask() {
     }
     return(
         <div className="nav-task">
-        <div classname="tasks-left-todo">x tasks left</div>
+        <div className="tasks-left">{active.length} tasks left</div>
         <button className="all-tasks-btn"
-            onClick={() => {
-                handleClickAllTasks();
-            }}
           >All</button>
                  <button className="active-tasks-btn"
             onClick={() => {
