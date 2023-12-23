@@ -104,7 +104,7 @@ changeTaskToShow = (filter) => {
         />
         <NavTask 
             tasks={this.state.tasks}
-            changeTasksToShow={this.changeTaskToShow}
+            changeTaskToShow={this.changeTaskToShow}
         />
         </div>
         <Footer />
