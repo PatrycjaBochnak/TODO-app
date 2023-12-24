@@ -31,7 +31,7 @@
   display: flex;
   width: 40%;
   height: 100%;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 270px);
   flex: 1;
   flex-flow: column;
   background-color: rgba(255, 255, 255, 0.7);

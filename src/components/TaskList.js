@@ -17,7 +17,6 @@ const TaskList = (props) => {
   return (
     <div className="tasks-list">
       <div className="active-tasks">
-        <h2 className="App-headings">Tasks to do</h2>
         {activeTasks.length > 0 ? (
           activeTasks.map((task) => (
             <Task key={task.id} task={task} change={props.change} />

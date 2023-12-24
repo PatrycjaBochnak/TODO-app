@@ -4,11 +4,6 @@
     align-items: center;
 }
 
-.App-headings {
-    display: flex;
-    justify-content: center;
-    color: #333;
-}
 .active-tasks,
 .done {
     width: 90%;
