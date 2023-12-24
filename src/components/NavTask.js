@@ -16,17 +16,17 @@ const NavTask = (props) => {
 
   const handleActiveButtonClick = () => {
     setDisplayedTasks(activeTasks);
-    props.changeDisplayedTasks(activeTasks); // Przekazanie wyniku do komponentu nadrzędnego
+    props.changeDisplayedTasks(activeTasks);
   };
 
   const handleAllButtonClick = () => {
     setDisplayedTasks([...activeTasks, ...completedTasks]);
-    props.changeDisplayedTasks([...activeTasks, ...completedTasks]); // Przekazanie wyniku do komponentu nadrzędnego
+    props.changeDisplayedTasks([...activeTasks, ...completedTasks]);
   };
 
   const handleCompletedButtonClick = () => {
     setDisplayedTasks(completedTasks);
-    props.changeDisplayedTasks(completedTasks); // Przekazanie wyniku do komponentu nadrzędnego
+    props.changeDisplayedTasks(completedTasks);
   };
 
   return (
@@ -34,18 +34,20 @@ const NavTask = (props) => {
       <div className="tasks-left">
         {props.tasks.filter((task) => task.active).length} tasks left
       </div>
-      <button className="all-tasks-btn" onClick={handleAllButtonClick}>
-        All
-      </button>
-      <button className="active-tasks-btn" onClick={handleActiveButtonClick}>
-        Active
-      </button>
-      <button
-        className="completed-tasks-btn"
-        onClick={handleCompletedButtonClick}
-      >
-        Completed
-      </button>
+      <div className="buttons-container">
+        <button className="all-tasks-btn" onClick={handleAllButtonClick}>
+          All
+        </button>
+        <button className="active-tasks-btn" onClick={handleActiveButtonClick}>
+          Active
+        </button>
+        <button
+          className="completed-tasks-btn"
+          onClick={handleCompletedButtonClick}
+        >
+          Completed
+        </button>
+      </div>
     </div>
   );
 };

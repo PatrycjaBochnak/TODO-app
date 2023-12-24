@@ -4,6 +4,7 @@ import TaskList from "./TaskList";
 import NavTask from "./NavTask";
 import Footer from "../layouts/Footer";
 import Header from "../layouts/Header";
+
 class App extends Component {
   counter = 3;
   state = {
@@ -42,6 +43,7 @@ class App extends Component {
       },
     ],
   };
+
   addTask = (text, date, imporant) => {
     console.log("added task");
     const task = {
@@ -60,20 +62,7 @@ class App extends Component {
 
     return true;
   };
-  // deleteTask = (id) => {
-  //   console.log("delete");
-  //   const tasks = [...this.state.tasks];
-  //   const index = tasks.findIndex((task) => task.id === id);
-  //   tasks.splice(index, 1);
-  //   this.setState({
-  //     tasks,
-  //   });
-  //   // let tasks = [...this.state.tasks];
-  //   // tasks = tasks.filter(task => task.id !== id)
-  //   // this.setState({
-  //   // tasks
-  //   // })
-  // };
+
   changeTaskStatus = (id) => {
     console.log("change");
     const tasks = [...this.state.tasks];
@@ -87,28 +76,36 @@ class App extends Component {
       tasks,
     });
   };
-changeTaskToShow = (filter) => {
-  console.log(`Changing tasks to show: ${filter}`);
-}
+
+  changeTaskToShow = (filter) => {
+    console.log(`Changing tasks to show: ${filter}`);
+    // Dodaj logikę do zarządzania wyświetlanymi zadaniami
+  };
+
+  changeDisplayedTasks = (displayedTasks) => {
+    console.log("Changing displayed tasks:", displayedTasks);
+    // Dodaj logikę do zarządzania wyświetlanymi zadaniami
+  };
+
   render() {
     return (
       <div className="App">
         <Header />
         <div className="main-app-content">
-        <AddTask addTask={this.addTask} />
-        <TaskList
-          tasks={this.state.tasks}
-          delete={this.deleteTask}
-          change={this.changeTaskStatus}
-          changeTasksToShow={this.changeTaskToShow}
-        />
-        <NavTask 
+          <AddTask addTask={this.addTask} />
+          <TaskList
+            tasks={this.state.tasks}
+            change={this.changeTaskStatus}
+            changeTasksToShow={this.changeTaskToShow}
+          />
+          <NavTask
             tasks={this.state.tasks}
             changeTaskToShow={this.changeTaskToShow}
-        />
+            changeDisplayedTasks={this.changeDisplayedTasks}
+          />
         </div>
         <Footer />
-        </div>
+      </div>
     );
   }
 }

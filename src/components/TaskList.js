@@ -27,15 +27,13 @@ const TaskList = (props) => {
         )}
       </div>
       <hr />
-      {/* Dodaj logikę renderowania zadań */}
-      <div className="done">
+      {/* <div className="done">
         <h2 className="App-headings">Done tasks</h2>
-        {/* Dodaj logikę renderowania ukończonych zadań */}
         {completedTasks.length > 5 && <span>Preview for only 5 last tasks</span>}
         {completedTasks.slice(0, 5).map((task) => (
           <Task key={task.id} task={task} change={props.change} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
