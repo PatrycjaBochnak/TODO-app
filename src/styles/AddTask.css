@@ -1,81 +1,71 @@
 .form-todo {
-    margin-top: 15px;
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: 100%;
-    justify-content: space-around;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
 }
 .todo-addtask {
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
 }
 .todo-input {
     position: relative;
-   display: flex;
-   align-items: center;
-   margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 80%;
 }
 
 .todo-input input {
-    flex: 1;
     padding: 10px;
     font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
 }
 
-.todo-input button {
-    margin-left: 10px;
-    background-color: aquamarine;
-    color: black;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
+/* .todo-input button {
+  margin-left: 10px;
+  background-color: aquamarine;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .date-input {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .date-input label {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .date-input input {
-    flex: 1;
-    margin-left: 10px;
-    font-size: 19px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
+  flex: 1;
+  margin-left: 10px;
+  font-size: 19px;
+  border: 1px solid black;
+  border-radius: 5px;
+} */
 
 .todo-addtask button {
-    background-color: blueviolet;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: blueviolet;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .todo-addtask button:hover {
-    background-color: brown;
-}
-
-.todo-input input[type="checkbox"]{
-    margin-left: 10px;
-}
-
-.todo-input button {
-    background-color: blueviolet;
-}
-
-.todo-input button:hover {
-    background-color: brown;
+  background-color: brown;
 }
