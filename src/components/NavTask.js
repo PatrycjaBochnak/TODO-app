@@ -12,19 +12,21 @@ const NavTask = (props) => {
 
     setActiveTasks(active);
     setCompletedTasks(completed);
-    setDisplayedTasks(active); // Domyślnie wyświetlaj aktywne zadania
   }, [props.tasks]);
 
   const handleActiveButtonClick = () => {
     setDisplayedTasks(activeTasks);
+    props.changeDisplayedTasks(activeTasks); // Przekazanie wyniku do komponentu nadrzędnego
   };
 
   const handleAllButtonClick = () => {
     setDisplayedTasks([...activeTasks, ...completedTasks]);
+    props.changeDisplayedTasks([...activeTasks, ...completedTasks]); // Przekazanie wyniku do komponentu nadrzędnego
   };
 
   const handleCompletedButtonClick = () => {
     setDisplayedTasks(completedTasks);
+    props.changeDisplayedTasks(completedTasks); // Przekazanie wyniku do komponentu nadrzędnego
   };
 
   return (
@@ -44,11 +46,6 @@ const NavTask = (props) => {
       >
         Completed
       </button>
-      <div className="displayed-tasks">
-        {displayedTasks.map((task) => (
-          <div key={task.id}>{task.text}</div>
-        ))}
-      </div>
     </div>
   );
 };

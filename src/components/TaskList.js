@@ -1,40 +1,41 @@
-import React from "react";
-import Task from "./Task";
+import React, { useState, useEffect } from "react";
 import "../styles/TaskList.css";
+import Task from "./Task";
 
 const TaskList = (props) => {
-  const active = props.tasks.filter((task) => task.active === true);
+  const [activeTasks, setActiveTasks] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState([]);
 
-  const completed = props.tasks.filter((task) => task.active === false);
+  useEffect(() => {
+    const active = props.tasks.filter((task) => task.active === true);
+    const completed = props.tasks.filter((task) => task.active === false);
 
-  const activeTasks = active.map((task) => (
-    <Task key={task.id} task={task} change={props.change} />
-  ));
-
-  const completedTasks = completed.map((task) => (
-    <Task key={task.id} task={task} change={props.change} />
-  ));
-
-  const allTasks = activeTasks.concat(completedTasks);
+    setActiveTasks(active);
+    setCompletedTasks(completed);
+  }, [props.tasks]);
 
   return (
     <div className="tasks-list">
       <div className="active-tasks">
         <h2 className="App-headings">Tasks to do</h2>
         {activeTasks.length > 0 ? (
-          activeTasks
+          activeTasks.map((task) => (
+            <Task key={task.id} task={task} change={props.change} />
+          ))
         ) : (
           <p> You finished your tasks. Great job!</p>
         )}
       </div>
       <hr />
-      {/* <div className="done">
-        <h2 className="App-headings">
-          Done tasks
-        </h2>
-        {completed.length > 5 && <span>Preview for only 5 last tasks</span>}
-        {completedTasks.slice(0, 5)}
-      </div> */}
+      {/* Dodaj logikę renderowania zadań */}
+      <div className="done">
+        <h2 className="App-headings">Done tasks</h2>
+        {/* Dodaj logikę renderowania ukończonych zadań */}
+        {completedTasks.length > 5 && <span>Preview for only 5 last tasks</span>}
+        {completedTasks.slice(0, 5).map((task) => (
+          <Task key={task.id} task={task} change={props.change} />
+        ))}
+      </div>
     </div>
   );
 };
