@@ -79,12 +79,10 @@ class App extends Component {
 
   changeTaskToShow = (filter) => {
     console.log(`Changing tasks to show: ${filter}`);
-    // Dodaj logikę do zarządzania wyświetlanymi zadaniami
   };
 
   changeDisplayedTasks = (displayedTasks) => {
     console.log("Changing displayed tasks:", displayedTasks);
-    // Dodaj logikę do zarządzania wyświetlanymi zadaniami
   };
 
   render() {

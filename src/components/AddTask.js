@@ -5,7 +5,7 @@ class AddTask extends Component {
   state = {
     text: "",
     checked: false,
-    date: "2023-06-26",
+    date: "2024-03-26",
   };
 
   handleDate = (e) => {
@@ -63,8 +63,6 @@ class AddTask extends Component {
   };
 
   render() {
-    const currentDate = new Date();
-    const maxDate = "2029-12-31";
 
     return (
       <div className="form-todo">
