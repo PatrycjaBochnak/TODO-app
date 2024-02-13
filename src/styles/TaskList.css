@@ -6,6 +6,9 @@
 
 .active-tasks,
 .done {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     width: 90%;
     margin-bottom: 20px;
 }

@@ -45,6 +45,12 @@ class AddTask extends Component {
     }, 1000);
   };
 
+  handleEnterKey = (e) => {
+    if (e.key === "Enter") {
+      this.handleClick();
+    }
+  };
+
   handleClick = () => {
     const { text, date, checked } = this.state;
     if (text.length > 2) {
@@ -54,7 +60,7 @@ class AddTask extends Component {
         this.setState({
           text: "",
           checked: false,
-          date: "2023-04-25",
+          date: new Date(),
         });
       }
     } else {
@@ -63,7 +69,6 @@ class AddTask extends Component {
   };
 
   render() {
-
     return (
       <div className="form-todo">
         <div className="todo-input">
@@ -72,9 +77,12 @@ class AddTask extends Component {
             placeholder="Create a new todo..."
             value={this.state.text}
             onChange={this.handleText}
+            onKeyDown={this.handleEnterKey}
           />
           {this.state.text.length > 0 && (
-            <button className="todo-addtask" onClick={this.handleClick}>Add</button>
+            <button className="todo-addtask" onClick={this.handleClick}>
+              Add
+            </button>
           )}
         </div>
       </div>
