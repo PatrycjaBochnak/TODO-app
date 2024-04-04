@@ -14,18 +14,15 @@ const NavTask = (props) => {
     setCompletedTasks(completed);
   }, [props.tasks]);
 
-  const handleActiveButtonClick = () => {
-    setDisplayedTasks(activeTasks);
-    props.changeDisplayedTasks(activeTasks);
-  };
-
   const handleAllButtonClick = () => {
-    setDisplayedTasks([...activeTasks, ...completedTasks]);
     props.changeDisplayedTasks([...activeTasks, ...completedTasks]);
   };
 
+  const handleActiveButtonClick = () => {
+    props.changeDisplayedTasks(activeTasks);
+  };
+
   const handleCompletedButtonClick = () => {
-    setDisplayedTasks(completedTasks);
     props.changeDisplayedTasks(completedTasks);
   };
 

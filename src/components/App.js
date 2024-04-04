@@ -49,8 +49,8 @@ class App extends Component {
         active: true,
         finishDate: null,
       },
-     
     ],
+    displayedTasks: [],
   };
 
   addTask = (text, date, imporant) => {
@@ -86,12 +86,18 @@ class App extends Component {
     });
   };
 
+  changeAllTasks = (allTasks) => {
+    console.log("Showing all tasks: ", 
+    allTasks);
+  };
+
   changeTaskToShow = (filter) => {
     console.log(`Changing tasks to show: ${filter}`);
   };
 
   changeDisplayedTasks = (displayedTasks) => {
     console.log("Changing displayed tasks:", displayedTasks);
+    this.setState({ displayedTasks });
   };
 
   render() {
@@ -101,15 +107,16 @@ class App extends Component {
         <div className="main-app-content">
           <AddTask addTask={this.addTask} />
           <TaskList
-            tasks={this.state.tasks}
-            change={this.changeTaskStatus}
-            changeTasksToShow={this.changeTaskToShow}
-          />
-          <NavTask
-            tasks={this.state.tasks}
-            changeTaskToShow={this.changeTaskToShow}
-            changeDisplayedTasks={this.changeDisplayedTasks}
-          />
+          tasks={this.state.displayedTasks.length > 0 ? this.state.displayedTasks : this.state.tasks}
+          change={this.changeTaskStatus}
+          changeTasksToShow={this.changeTaskToShow}
+        />
+        <NavTask
+          tasks={this.state.tasks}
+          changeTaskToShow={this.changeTaskToShow}
+          changeDisplayedTasks={this.changeDisplayedTasks}
+          changeAllTasks={this.changeAllTasks}
+        />
         </div>
         <Footer />
       </div>

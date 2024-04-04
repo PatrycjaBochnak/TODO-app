@@ -4,12 +4,16 @@ import Task from "./Task";
 
 const TaskList = (props) => {
   const [activeTasks, setActiveTasks] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState([]);
   const [showScrollbar, setShowScrollbar] = useState(false);
   const activeTasksRef = useRef(null);
 
   useEffect(() => {
     const active = props.tasks.filter((task) => task.active === true);
+    const completed = props.tasks.filter((task) => !task.active); // Zmiana: Filtruj zadania zakończone
+
     setActiveTasks(active);
+    setCompletedTasks(completed);
   }, [props.tasks]);
 
   useEffect(() => {
@@ -18,7 +22,7 @@ const TaskList = (props) => {
     } else {
       setShowScrollbar(false);
     }
-  }, [activeTasks]);
+  }, [activeTasks, props.tasks]);
 
   return (
     <div className="tasks-list">
@@ -28,27 +32,15 @@ const TaskList = (props) => {
             <Task key={task.id} task={task} change={props.change} />
           ))
         ) : (
-          <p> You finished your tasks. Great job!</p>
+          <p>No active tasks</p> // Dodanie komunikatu, gdy nie ma aktywnych zadań
         )}
       </div>
-      {showScrollbar && (
-        <input
-          type="range"
-          className="scrollbar"
-          min="0"
-          max={activeTasksRef.current.scrollHeight - activeTasksRef.current.clientHeight}
-          onChange={(e) => {
-            activeTasksRef.current.scrollTop = e.target.value;
-          }}
-        />
-      )}
-      {/* <div className="done">
-        <h2 className="App-headings">Done tasks</h2>
-        {completedTasks.length > 5 && <span>Preview for only 5 last tasks</span>}
-        {completedTasks.slice(0, 5).map((task) => (
+      {showScrollbar}
+      <div className="completed-tasks"> 
+        {completedTasks.map((task) => ( 
           <Task key={task.id} task={task} change={props.change} />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };
