@@ -13,7 +13,7 @@ class App extends Component {
         id: 0,
         text: "Get a job",
         date: "2024-10-08",
-        important: false,
+        important: true,
         active: true,
         finishDate: null,
       },
@@ -35,12 +35,21 @@ class App extends Component {
       },
       {
         id: 3,
+        text: "Make supper for friends",
+        date: "2024-06-06",
+        important: true,
+        active: true,
+        finishDate: null,
+      },
+      {
+        id: 4,
         text: "Read for 1 hour",
         date: "2024-05-05",
         important: false,
         active: true,
         finishDate: null,
       },
+     
     ],
   };
 

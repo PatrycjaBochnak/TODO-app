@@ -22,7 +22,7 @@ const TaskList = (props) => {
 
   return (
     <div className="tasks-list">
-      <div className="active-tasks" ref={activeTasksRef} style={{ maxHeight: "350px", overflowY: "auto" }}>
+      <div className="active-tasks" ref={activeTasksRef} style={{ maxHeight: "340px", overflowY: "auto" }}>
         {activeTasks.length > 0 ? (
           activeTasks.map((task) => (
             <Task key={task.id} task={task} change={props.change} />
