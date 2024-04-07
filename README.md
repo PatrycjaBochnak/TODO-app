@@ -12,7 +12,7 @@ TODO App is a simple application that helps you to mark and check your daily que
 
 ## 📝 Project requirements 
 
-- User can add their tasks, task has need to get more than 3 words
+- User can add the tasks, task has need to get more than 3 words
 - You can add task by button `add task` or pressing `enter`
 - You can make task priority to get it occured
 - You can make task done to move it to done tasks table or delete it
