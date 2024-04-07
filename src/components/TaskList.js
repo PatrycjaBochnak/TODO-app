@@ -10,7 +10,7 @@ const TaskList = (props) => {
 
   useEffect(() => {
     const active = props.tasks.filter((task) => task.active === true);
-    const completed = props.tasks.filter((task) => !task.active); // Zmiana: Filtruj zadania zakończone
+    const completed = props.tasks.filter((task) => !task.active);
 
     setActiveTasks(active);
     setCompletedTasks(completed);
@@ -32,11 +32,11 @@ const TaskList = (props) => {
             <Task key={task.id} task={task} change={props.change} />
           ))
         ) : (
-          <p>No active tasks</p> // Dodanie komunikatu, gdy nie ma aktywnych zadań
+          <p>No active tasks</p>
         )}
       </div>
       {showScrollbar}
-      <div className="completed-tasks"> 
+      <div className="completed-tasks" style={{ maxHeight: "340px", overflowY: "auto"} }> 
         {completedTasks.map((task) => ( 
           <Task key={task.id} task={task} change={props.change} />
         ))}
