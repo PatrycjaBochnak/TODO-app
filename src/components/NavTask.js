@@ -27,10 +27,11 @@ const NavTask = (props) => {
   };
 
   return (
+    <>
     <div className="nav-task">
-      <div className="tasks-left">
-        {props.tasks.filter((task) => task.active).length} tasks left
-      </div>
+    <div className="tasks-left">
+    {props.tasks.filter((task) => task.active).length} tasks left
+  </div>
       <div className="buttons-container">
         <button className="all-tasks-btn" onClick={handleAllButtonClick}>
           All
@@ -46,6 +47,7 @@ const NavTask = (props) => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

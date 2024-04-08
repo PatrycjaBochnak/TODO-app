@@ -1,5 +1,5 @@
 .form-todo {
-  margin-top: 15px;
+  margin: 25px 0 15px 0;
   position: relative;
   display: flex;
   flex-flow: column;

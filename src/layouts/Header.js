@@ -3,7 +3,7 @@ import "../styles/Header.css";
 
 const Header = () => (
   <div className="header">
-    <div className="logo-text">TODO</div>
+    <div className="logo-text">TODO APP</div>
   </div>
 );
 

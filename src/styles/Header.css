@@ -3,11 +3,13 @@
   top: 30px;
   width: 40%;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.664);
   justify-content: center;
   z-index: 1000;
   border-radius: 1em;
 }
 .logo-text {
+  font-family: Pacifico, sans-serif;
   font-size: 40px;
+  color: rgb(66, 66, 66);
 }
